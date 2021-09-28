@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/masterstyle.ccs">
+    <script src="./js/viggenere.js"></script>
+    <script src="./js/main.js"></script>
+    <title>viggenere</title>
+</head>
+<body>
+    <header>
+        <h1 class="display-1">Cifrado y Descifrado Viggenere</h1>
+    </header>
+    <main>
+        <form class="row g-3 needs-validation" name="vigenere" novalidate>
+            <div>
+                <div class="col">
+                    <label for="mensaje" class="form-label">Mensaje a cifrar</label>
+                    <input type="text" id="mess" name="mess" class="form-control" onkeypress="return validarm(event)">
+                </div>
+                <div class="col">
+                    <label for="clave" class="form-label">Clave</label>
+                    <input type="text" id="llave" name="llave" class="form-control">
+                </div>
+            </div>
+            <button onclick="return procesarV('c')" class="btn btn-info" class="btn btn-primary btn-lg">Cifrar</button>
+            <button onclick="return procesarV('d')" class="btn btn-info" class="btn btn-primary btn-lg">Decifrar</button>
+            <div class="col">
+                <label for="resultado" class="form-label">Mensaje cifrado</label>
+                <input type="text" id="rs" name="rs" class="form-control" readonly>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <br>
+        <form method="get" action="./index.html"><button type="submit" class="btn btn-info" class="btn btn-primary btn-lg">Regresar</button></form>
+    </footer>
+</body>
+</html>
